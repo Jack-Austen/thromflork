@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Andrew Jokes</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<title>Button Press CSS Change</title>
+	<style>
+		body {
+			background-color: lightgray;
+			font-family: Arial, sans-serif;
+			font-size: 18px;
+			color: black;
+			padding: 20px;
+			margin: 0;
+			transition: all 0.5s ease;
+		}
+
+		h1 {
+			font-size: 36px;
+			font-weight: bold;
+			margin-top: 0;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		p {
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+
+		.button {
+			background-color: gray;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		.dark-mode {
+			background-color: black;
+			color: white;
+		}
+	</style>
 </head>
 <body>
 	<header>
 		<h1>Andrew Jokes</h1>
-		<nav>
-			<ul>
-				<li><a href="#joke1">Joke 1</a></li>
-				<li><a href="#joke2">Joke 2</a></li>
-				<li><a href="#joke3">Joke 3</a></li>
-			</ul>
-		</nav>
 	</header>
 	<main>
 		<section id="joke1">
@@ -34,5 +62,12 @@
 	<footer>
 		<p>Created by Jack Austen (ChatGPT)</p>
 	</footer>
+	<button onclick="toggleDarkMode()" class="button">Toggle Dark Mode</button>
+
+	<script>
+		function toggleDarkMode() {
+			document.body.classList.toggle('dark-mode');
+		}
+	</script>
 </body>
 </html>
